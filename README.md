@@ -1,16 +1,49 @@
 
-![Untitled](https://github.com/user-attachments/assets/1ed5218c-43d9-4396-8de3-ce8ee50e8f80)
+# 🏥 Medical System
 
+## 📌 Overview
+A **Medical Management System** designed to manage patients, doctors, and appointments.  
+The platform provides separate roles for **Patients** and **Doctors** with appointment booking, medical records, and scheduling.
 
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
 
-Currently, two official plugins are available:
+### Patients
+- Register & manage personal profile (medical history, contact info).  
+- Book appointments with doctors.  
+- View upcoming and past appointments.  
+- Cancel appointments if needed.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Doctors
+- Register & update specialization & availability.  
+- Manage patient appointments.  
+- Approve or cancel bookings.  
+- View patient medical history.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React, Tailwind CSS, Axios  
+- **Backend:** Django, Django REST Framework (DRF), JWT Authentication  
+- **Database:** PostgreSQL  
+- **Other:** GitHub, Agile/Scrum  
+
+---
+
+## 📂 Database Design
+- `Users` → patients & doctors (roles).  
+- `Patients` → medical history, phone, address.  
+- `Doctors` → specialization, available slots.  
+- `Appointments` → links patients & doctors (status: booked/canceled).  
+
+---
+
+## 🚀 Installation & Run
+
+### Backend (Django)
+```bash
+cd backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
